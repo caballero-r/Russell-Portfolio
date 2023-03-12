@@ -1,0 +1,53 @@
+:root {
+  --colormain: #424656;
+  --colorsub: #A6ABBD;
+    
+}
+
+header{
+  display: flex; 
+  flex-direction: row;
+  align-items: center;
+  height: 100px;   
+  background-color: var(--colormain) ;
+  
+}
+
+.title {  
+  background-color: var(--colorsub);
+  font-size: 50px;
+  margin-left: 0%;
+  padding-left: 10%;
+}
+
+/* Navi Style */
+.navi {
+  margin-right: 0%;
+  font-size: 20px;
+  
+}
+
+nav ul {
+  display: inline-block
+}
+
+nav li {
+  display: inline-block;
+  list-style-type: none;
+  text-underline-position: under left;
+  font-family: var(--font);
+  color: var(--colorsub);  
+  font-size: 15px;
+  padding: 10px;
+}
+
+a[href] {
+  color: var(--colorsub);   
+  }
+
+.bravo {
+  height: 100px;
+  object-fit: cover;
+  background-image: url("../images/Water\ Ripple.jpeg");
+
+}
