@@ -6,7 +6,7 @@
 
 header{
   display: flex; 
-  flex-direction: row;
+  justify-content: space-between;
   align-items: center;
   height: 100px;   
   background-color: var(--colormain) ;
@@ -15,39 +15,62 @@ header{
 
 .title {  
   background-color: var(--colorsub);
-  font-size: 50px;
+  font-size: 40px;
   margin-left: 0%;
   padding-left: 10%;
 }
 
 /* Navi Style */
-.navi {
-  margin-right: 0%;
-  font-size: 20px;
-  
+nav {
+ display: flex;
+ justify-content: flex-end;
+ margin: 0;
 }
 
-nav ul {
-  display: inline-block
-}
-
-nav li {
-  display: inline-block;
+ul {
+  display: flex;
   list-style-type: none;
-  text-underline-position: under left;
-  font-family: var(--font);
+  justify-content: flex-end;
+  text-decoration: underline;
+  text-decoration-thickness: 3px;
   color: var(--colorsub);  
   font-size: 15px;
-  padding: 10px;
+  padding: 20px;
+}
+
+li{
+  padding: 0 10px;
 }
 
 a[href] {
   color: var(--colorsub);   
   }
 
+  /* Image under Header */
 .bravo {
   height: 100px;
-  object-fit: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
   background-image: url("../images/Water\ Ripple.jpeg");
+}
 
+/* Main Section Begins */
+
+/* About me section */
+.box1 {
+  margin: 30px auto;
+  padding: 30px;
+  display: flex;
+  width: 50%;
+  
+}
+
+h1 {
+  margin-right: 10px;
+  padding-right: 10px;
+}
+
+p {
+  border-left: 3px solid var(--colormain);
+  padding-left: 10px;
 }
