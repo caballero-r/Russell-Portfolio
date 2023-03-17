@@ -23,6 +23,9 @@ THEN I am presented with a responsive layout that adapts to my viewport
 
 
 ## Live URL
+
+https://caballero-r.github.io/Russell-Portfolio/
+
 <img src="images/Portfolio_screenshot.png" width=500 height=800  alt="Portfolio Preview">
 
 ## Resources
