@@ -1,29 +1,47 @@
 :root {
   --colormain: #424656;
   --colorsub: #A6ABBD;
+  --subtitle: 40px;
     
 }
 
-header{
+body {
+  background-color: #D6F4FF;
+
+}
+
+header, .container {
   display: flex; 
   justify-content: space-between;
   align-items: center;
   height: 100px;   
-  background-color: var(--colormain) ;
-  
+  background-color: var(--colormain);
 }
 
-.title {  
+.title, .bottom {  
   background-color: var(--colorsub);
-  font-size: 40px;
   margin-left: 0%;
   padding-left: 10%;
 }
 
+h2 {
+  background-color: var(--colorsub);
+  margin-right: 10px;
+  padding-right: 10px;
+  font-size: var(--subtitle);
+}
+
+h3 {
+  font-size: 25px;
+}
+
+.title {
+  font-size: 60px;
+}
+
 /* Navi Style */
 nav {
- display: flex;
- justify-content: flex-end;
+ display: inline-block;
  margin: 0;
 }
 
@@ -47,30 +65,194 @@ a[href] {
   }
 
   /* Image under Header */
-.bravo {
-  height: 100px;
+.hero {
+  height: 150px;
+  display: flex;
+  justify-content: center;
   background-size: cover;
   background-repeat: no-repeat;
   background-image: url("../images/Water\ Ripple.jpeg");
+  
+}
+
+figure img {
+  width: 150px;
+  height: 150px;
+  background-size: cover;
+  border-radius: 30px;
 }
 
 /* Main Section Begins */
 
 /* About me section */
-.box1 {
+.group {
   margin: 30px auto;
   padding: 30px;
   display: flex;
-  width: 50%;
+  width: 80%;
   
 }
 
-h1 {
-  margin-right: 10px;
-  padding-right: 10px;
+p {
+  border-left: 3px solid var(--colorsub);
+  padding-left: 10px;
 }
 
-p {
-  border-left: 3px solid var(--colormain);
-  padding-left: 10px;
+
+
+/* Work Section */
+.projects-container {
+  margin: 30px auto;
+  padding: 30px;
+  width: 80%;
+  display: flex;
+}
+
+.right-hand-column {
+ display: flex;
+ flex-direction: column;
+ border-left: 3px solid var(--colorsub);
+ padding-left: 10px;
+}
+
+.large-project {
+  width: 100%;
+}
+
+.large-project img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.small-projects {
+  display: flex;
+}
+
+.small-projects img {
+  width: 100%;
+}
+
+.items {
+  padding: 20px;
+  width: 50%;
+}
+
+/* This section deals with all the media queries at different screen sizes */
+
+@media screen and (max-width: 980px) {
+  
+  header, .container{
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+  }
+
+  .group {
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+   
+  }
+
+  .projects-container {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .right-hand-column {
+   display: flex;
+   flex-direction: column;
+   border-left: 3px solid var(--colorsub);
+   padding-left: 10px;
+  }
+  
+  .large-project {
+    width: 100%;
+  }
+  
+  .large-project img {
+    width: 100%;
+    object-fit: cover;
+  }
+  
+  .small-projects {
+    display: flex;
+  }
+  
+  .small-projects img {
+    width: 100%;
+  }
+  
+  .items {
+    padding: 20px;
+    width: 50%;
+  }
+
+}
+
+@media screen and (max-width: 768px) {
+
+  .hero {
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url("../images/Water\ Ripple.jpeg");
+  } 
+
+  figure img {
+    width: 100px;
+    height: 100px;
+    background-size: cover;
+    border-radius: 10px;
+  }
+}
+
+@media screen and (max-width: 680px) {
+  h2 {
+    background-color: var(--colorsub);
+    margin-right: 10px;
+    padding-right: 10px;
+    font-size: 20px;
+  }
+  
+  h3 {
+    font-size: 15px;
+  }
+  
+  .title {
+    font-size: 40px;
+  }
+  .hero {
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url("../images/Water\ Ripple.jpeg");
+    
+  }
+  
+  figure img {
+    width: 100px;
+    height: 100px;
+    background-size: cover;
+    border-radius: 10px;
+  }
+}
+
+@media screen and (max-width: 430px) {
+  h2 {
+    background-color: var(--colorsub);
+    font-size: 5px;
+  }
+  
+  h3 {
+    font-size: 5px;
+  }
+  
+  .title {
+    font-size: 7px;
+  }
 }
